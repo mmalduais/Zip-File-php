@@ -14,15 +14,14 @@ if (isset($_POST['submit'])){
             $zip->extractTo("upload/$rand/");
             $zip->close();
             $files=scandir("upload/$rand/");
-    
 
             foreach($files as $list ){
                 if(strlen($list)>3){
-                    
+                    $msg.="<img  width='100px' src='upload/$rand/$list'/>";
                 }
                 
              
-                    $msg.="<img  width='100px' src='upload/$rand/$fineName/$list'/>";
+                    
 
                 }
         }  else{
